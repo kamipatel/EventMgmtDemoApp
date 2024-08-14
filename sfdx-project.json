@@ -1,0 +1,16 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "dc-app",
+      "default": false
+    }
+  ],
+  "name": "eventmgmtdemopkg",
+  "namespace": "eventapppkg",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "61.0"
+}

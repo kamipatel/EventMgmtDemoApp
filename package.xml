@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">   
+    <namespacePrefix>eventmanagerapp</namespacePrefix>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>    
+        <members>EventData__c</members>
+        <members>Registration__c</members>
+        <members>EventReview__c</members>        
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Event_Management_App</members>
+        <name>CustomApplication</name>
+    </types>    
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>   
+    <types>
+        <members>Event_Management_App_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>    
+    <types>
+        <members>Event_Manager_LabApp_permset</members>
+        <name>PermissionSet</name>
+    </types>        
+<types>
+    	<members>EventData__c-EventData Layout</members>
+        <members>Registration__c-Registration Layout</members>
+        <members>EventReview__c-EventReview Layout</members>
+		<name>Layout</name>
+	</types>    
+   <version>60.0</version>
+</Package>
