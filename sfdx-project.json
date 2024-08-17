@@ -10,7 +10,7 @@
     }
   ],
   "name": "eventmgmtdemopkg",
-  "namespace": "eventapppkg",
+  "namespace": "eventmgrapp",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "61.0"
 }

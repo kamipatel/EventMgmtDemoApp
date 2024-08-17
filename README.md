@@ -9,26 +9,26 @@ SELECT COUNT(eventapppkg__Registration__dlm.eventapppkg__eventapppkg_Contact_c__
 04t5Y000001MkH2
 
 # devhubs
+kamlesh.patel-j2ek@force.com (eventmgrapp)
 ns@248.kam (eventapppkg)
 kam@jeremypbo.org (jhddc)
-kamlesh.patel-j2ek@force.com (eventmgrapp)
 kamlesh.patel-vrzx@force.com (eventmanageapp)
 
 # Authenticate devhub
 sf org login web --alias devhub --set-default
-sf config set target-dev-hub=ns@248.kam
+sf config set target-dev-hub=kamlesh.patel-j2ek@force.com
 
 # just dc
-sf org create scratch -f config/project-scratch-def.json -a m1 --duration-days 30 
-sf org open -u t3
+sf org create scratch -f config/project-scratch-def.json -a a2 --duration-days 30 
+sf org open -u a2
 
 # deploy base 
-sf project deploy start --manifest package.xml --target-org t3 
-sf project retrieve start --manifest package.xml --target-org t3 
+sf project deploy start --manifest package.xml --target-org a2
+sf project retrieve start --manifest package.xml --target-org a2
 
 
 # Assign permset
-sf org assign permset --name Event_Manager_LabApp_permset --target-org t3
+sf org assign permset --name Event_Manager_LabApp_permset --target-org a2
 
 
 # retriever base 

@@ -1,0 +1,234 @@
+{
+  "type" : "sfdc_cms__form",
+  "title" : "Event Registration",
+  "contentBody" : {
+    "lightning:brandSource" : {
+      "defaultBrandOption" : "sfdcBrand"
+    },
+    "sfdc_cms:block" : {
+      "definition" : "sfdc_cms/rootContentBlock",
+      "id" : "f2e9f068-a8b1-461f-bae0-adf920d50abd",
+      "type" : "block",
+      "children" : [ {
+        "attributes" : {
+          "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+          "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+          "lightning:colorScheme" : "{!$brand.colorScheme}",
+          "lightning:margin" : "{!$brand.spacing.none}",
+          "lightning:padding" : "{!$brand.spacing.xSmall}",
+          "stackOnMobile" : true,
+          "lightning:backgroundImage" : {
+            "repeat" : "no-repeat",
+            "position" : "center center",
+            "size" : "cover"
+          }
+        },
+        "definition" : "lightning/section",
+        "id" : "304a2bee-f98c-4933-8fe2-09945b6ab0b9",
+        "type" : "block",
+        "children" : [ {
+          "attributes" : {
+            "columnWidth" : 12.0,
+            "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+            "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+            "lightning:colorScheme" : "{!$brand.colorScheme}",
+            "lightning:margin" : "{!$brand.spacing.none}",
+            "lightning:padding" : "{!$brand.spacing.xSmall}",
+            "lightning:verticalAlignment" : "top",
+            "lightning:backgroundImage" : {
+              "repeat" : "no-repeat",
+              "position" : "center center",
+              "size" : "cover"
+            }
+          },
+          "definition" : "lightning/column",
+          "id" : "c5b42ad1-8eed-4321-92f3-36ed9a8bd3a8",
+          "type" : "block",
+          "children" : [ {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "options" : [ {
+                "label" : "Austin Music Festival",
+                "value" : "Aus_Music",
+                "variant" : "standard"
+              }, {
+                "label" : "401K Webinar",
+                "value" : "401k_Webinar"
+              } ],
+              "sfdc_cms:formInputLabelProperty" : "Event",
+              "sfdc_cms:formInputNameProperty" : "Event",
+              "sfdc_cms:formInputRequiredProperty" : false,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputDropdown",
+            "id" : "2690b3c9-8464-46aa-804a-14c8d7c2e97c",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "maxLength" : 255.0,
+              "sfdc_cms:formInputLabelProperty" : "First Name",
+              "sfdc_cms:formInputNameProperty" : "First_Name",
+              "sfdc_cms:formInputRequiredProperty" : false,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputText",
+            "id" : "da067332-9109-45a6-8931-aa0914f94ed9",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "maxLength" : 255.0,
+              "sfdc_cms:formInputLabelProperty" : "Last Name",
+              "sfdc_cms:formInputNameProperty" : "Last_Name",
+              "sfdc_cms:formInputRequiredProperty" : false,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputText",
+            "id" : "6fc6853f-4fab-4d78-a080-562cf66cc781",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "maxLength" : 255.0,
+              "placeholder" : "Enter Your Email",
+              "sfdc_cms:formInputLabelProperty" : "Email",
+              "sfdc_cms:formInputNameProperty" : "Email",
+              "sfdc_cms:formInputRequiredProperty" : true,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputEmail",
+            "id" : "0a600e56-b388-4cc5-a8c2-70e71fe344c6",
+            "type" : "block"
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+          "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+          "lightning:colorScheme" : "{!$brand.colorScheme}",
+          "lightning:margin" : "{!$brand.spacing.none}",
+          "lightning:padding" : "{!$brand.spacing.xSmall}",
+          "stackOnMobile" : true,
+          "lightning:backgroundImage" : {
+            "repeat" : "no-repeat",
+            "position" : "center center",
+            "size" : "cover"
+          }
+        },
+        "definition" : "lightning/section",
+        "id" : "381cd6f9-5e25-4402-a514-7a93b7a71472",
+        "type" : "block",
+        "children" : [ {
+          "attributes" : {
+            "columnWidth" : 12.0,
+            "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+            "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+            "lightning:colorScheme" : "{!$brand.colorScheme}",
+            "lightning:margin" : "{!$brand.spacing.none}",
+            "lightning:padding" : "{!$brand.spacing.xSmall}",
+            "lightning:verticalAlignment" : "top",
+            "lightning:backgroundImage" : {
+              "repeat" : "no-repeat",
+              "position" : "center center",
+              "size" : "cover"
+            }
+          },
+          "definition" : "lightning/column",
+          "id" : "0685e2ba-94d8-44f4-bd2c-61761d8c6d5a",
+          "type" : "block",
+          "children" : [ {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.buttonStyleGroup.primary.lightning:borderRadius}",
+              "lightning:borderWidth" : "{!$brand.buttonStyleGroup.primary.lightning:borderWidth}",
+              "lightning:buttonColorGroup" : "{!$brand.buttonStyleGroup.primary.lightning:buttonColorGroup}",
+              "lightning:horizontalAlignment" : "center",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.buttonStyleGroup.primary.lightning:padding}",
+              "lightning:typography" : "{!$brand.buttonStyleGroup.primary.lightning:typography}",
+              "sfdc_cms:styleGroup" : "{!$brand.buttonStyleGroup.primary}",
+              "text" : "Submit",
+              "width" : "auto",
+              "lightning:click" : {
+                "actions" : [ {
+                  "definition" : "sfdc_cms/customEventAction",
+                  "attributes" : {
+                    "type" : "formsubmit",
+                    "options" : {
+                      "bubbles" : true
+                    }
+                  }
+                } ]
+              }
+            },
+            "definition" : "lightning/actionButton",
+            "id" : "46fc4941-dbc7-4c6d-af04-40a5353f7d7a",
+            "type" : "block"
+          } ]
+        } ]
+      } ]
+    },
+    "sfdc_cms:title" : "Event Registration",
+    "lightning:dataProviders" : [ ],
+    "formsubmission" : {
+      "actions" : [ {
+        "definition" : "sfdc_cms/umaFormSubmissionAction",
+        "attributes" : {
+          "formId" : "{!$form.id}",
+          "pageReferenceId" : "{!$page.id}",
+          "formData" : "{!$form.fields}"
+        }
+      }, {
+        "definition" : "sfdc_cms/showThankYouAction",
+        "attributes" : {
+          "message" : "Thank you for your submission."
+        }
+      } ]
+    }
+  },
+  "urlName" : "event-registration"
+}

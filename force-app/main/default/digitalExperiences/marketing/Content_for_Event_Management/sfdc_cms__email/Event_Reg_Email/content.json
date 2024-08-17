@@ -1,0 +1,92 @@
+{
+  "type" : "sfdc_cms__email",
+  "title" : "Event Registration Email",
+  "contentBody" : {
+    "backgroundColor" : "#f3f3f3",
+    "lightning:brandSource" : {
+      "defaultBrandOption" : "sfdcBrand"
+    },
+    "lightning:colorScheme" : "{!$brand.colorScheme}",
+    "lightning:dataProviders" : [ {
+      "attributes" : {
+        "objectApiName" : "UnifiedIndividual__dlm"
+      },
+      "definition" : "sfdc_cms__unifiedIndividualDataProvider",
+      "sfdcExpressionKey" : "unifiedIndividual"
+    } ],
+    "lightning:padding" : "{!$brand.spacing.none}",
+    "messagePurpose" : "transactional",
+    "sfdc_cms:block" : {
+      "definition" : "sfdc_cms/rootContentBlock",
+      "id" : "61a6f264-b3b2-4f80-b9ca-fd91a5528612",
+      "type" : "block",
+      "children" : [ {
+        "attributes" : {
+          "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+          "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+          "lightning:colorScheme" : "{!$brand.colorScheme}",
+          "lightning:margin" : "{!$brand.spacing.none}",
+          "lightning:padding" : "{!$brand.spacing.xSmall}",
+          "stackOnMobile" : true,
+          "lightning:backgroundImage" : {
+            "repeat" : "no-repeat",
+            "position" : "center center",
+            "size" : "cover"
+          }
+        },
+        "definition" : "lightning/section",
+        "id" : "8ecdb482-9b40-4086-b343-5fa42c7847af",
+        "type" : "block",
+        "children" : [ {
+          "attributes" : {
+            "columnWidth" : 12.0,
+            "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+            "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+            "lightning:colorScheme" : "{!$brand.colorScheme}",
+            "lightning:margin" : "{!$brand.spacing.none}",
+            "lightning:padding" : "{!$brand.spacing.xSmall}",
+            "lightning:verticalAlignment" : "top",
+            "lightning:backgroundImage" : {
+              "repeat" : "no-repeat",
+              "position" : "center center",
+              "size" : "cover"
+            }
+          },
+          "definition" : "lightning/column",
+          "id" : "a23ac799-ca8d-4b34-9cc6-a922dff0f14c",
+          "type" : "block",
+          "children" : [ {
+            "attributes" : {
+              "align" : "left",
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:colorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "linkColor" : "{!$brand.colorScheme.primaryAccent}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "lightning:typography" : "{!$brand.typography.paragraph.paragraph1}",
+              "text" : "Thank you for Event registration!<br /><br />We will follow up with next steps soon."
+            },
+            "definition" : "lightning/paragraph",
+            "id" : "5e6e96da-efd0-44d2-9773-0560dfdfb9b5",
+            "type" : "block"
+          } ]
+        } ]
+      } ]
+    },
+    "sfdc_cms:title" : "Event Registration Email",
+    "subjectLine" : "Thank you for Event Registration",
+    "lightning:expressions" : [ ],
+    "lightning:backgroundImage" : {
+      "repeat" : "no-repeat",
+      "position" : "center center",
+      "size" : "cover"
+    },
+    "sfdc_cms:variants" : [ ]
+  },
+  "urlName" : "event-registration-email"
+}
