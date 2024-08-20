@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <digitalExperienceFolderShares/>
+    <label>event workspace</label>
+    <modules>
+        <module>
+            <fullyQualifiedName>sfdc_cms__exportImport</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__form</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__landingPage</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__brand</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__email</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__orchestrator</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+    </modules>
+</DigitalExperienceBundle>
