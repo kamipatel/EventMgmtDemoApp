@@ -1,6 +1,6 @@
 {
   "orgName": "kam company",
-  "edition": "Developer",
+  "edition": "Enterprise",
   "features": ["CustomerDataPlatform","EnableSetPasswordInApi", "MarketingCloud"],
   "settings": {
     "lightningExperienceSettings": {

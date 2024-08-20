@@ -1,16 +1,29 @@
 {
   "packageDirectories": [
     {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
-      "default": true
+      "default": false,
+      "package": "eventdemoapp core Package",
+      "versionDescription": ""
     },
     {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "path": "dc-app",
-      "default": false
+      "default": true,
+      "package": "eventdemoapp DC Extension Package",
+      "versionDescription": ""
     }
   ],
   "name": "eventmgmtdemopkg",
-  "namespace": "eventmgrapp",
+  "namespace": "eventmanageapp",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "61.0"
+  "sourceApiVersion": "62.0",
+  "packageAliases": {
+    "eventdemoapp core Package": "0HoWs0000000KgHKAU",
+    "eventdemoapp core Package@0.1.0-1": "04tWs0000005f5lIAA",
+    "eventdemoapp DC Extension Package": "0HoWs0000000KhtKAE"
+  }
 }

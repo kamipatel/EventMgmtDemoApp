@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <masterLabel>EventDKSalesforce_Homeeventmanageapp_Status_cRegistrationeventmanageapp_Status_cpFYGydlltsgzcVX</masterLabel>
+    <sourceField>eventmanageapp__Registration1.eventmanageapp__eventmanageapp_Status_c__c</sourceField>
+    <targetField>Registration__dlm.eventmanageapp__eventmanageapp_Status_c__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">   
-    <namespacePrefix>eventmgrapp</namespacePrefix>
-    <types>
-        <members>Event_Registration</members>
-        <name>Flow</name>
-    </types>    
-    <types>
-        <members>marketing/Content_for_Event_Management</members>
-        <name>DigitalExperienceBundle</name>
-    </types>
+    <namespacePrefix>eventmanageapp</namespacePrefix>
     <types>
         <members>*</members>
         <name>CustomField</name>
@@ -41,5 +33,5 @@
         <members>EventReview__c-EventReview Layout</members>
 		<name>Layout</name>
 	</types>    
-   <version>60.0</version>
+   <version>62.0</version>
 </Package>
