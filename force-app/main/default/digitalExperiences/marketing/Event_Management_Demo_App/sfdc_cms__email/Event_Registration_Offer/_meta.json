@@ -1,0 +1,5 @@
+{
+  "apiName" : "Event_Registration_Offer",
+  "type" : "sfdc_cms__email",
+  "path" : ""
+}

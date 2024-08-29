@@ -1,0 +1,16 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "calltoregister",
+  "contentBody" : {
+    "altText" : false,
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/jpeg",
+        "ref" : "0sNEV0000000Esb2AE",
+        "type" : "file",
+        "size" : 172329
+      }
+    }
+  },
+  "urlName" : "calltoregister"
+}

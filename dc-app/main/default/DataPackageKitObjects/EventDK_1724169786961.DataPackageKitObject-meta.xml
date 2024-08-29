@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <masterLabel>EventDK</masterLabel>
-    <parentDataPackageKitDefinitionName>eventmanageapp__EventDK</parentDataPackageKitDefinitionName>
-    <referenceObjectName>eventmanageapp__SalesforceDotCom_Home</referenceObjectName>
-    <referenceObjectType>DataKitObjectTemplate</referenceObjectType>
-</DataPackageKitObject>

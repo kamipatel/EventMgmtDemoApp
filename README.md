@@ -4,15 +4,21 @@
 sf org login web --alias devhub --set-default
 sf config set target-dev-hub=
 
+# past orgs
+b1
+
 # just dc
-sf org create scratch -f config/project-scratch-def.json -a b1 --duration-days 30 
-sf org open -u b1
+sf org create scratch -f config/project-scratch-def.json -a cms1 --duration-days 30 
+sf org open -u cms1
 
 # deploy base 
-sf project deploy start --manifest package.xml --target-org b1
+sf project deploy start --manifest package.xml --target-org cms1
 
 # Assign permset
 sf org assign permset --name Event_Manager_LabApp_permset --target-org b1
+
+# retriever form 
+sf project retrieve start --manifest cms.xml --target-org cms1
 
 # retriever base 
 sf project retrieve start --manifest package.xml --target-org a2
