@@ -40,6 +40,7 @@ sf package create -n "eventdemoapp DC Package" -r dc-app -t Managed
 
 # package version
 -- DC
-sf package version create -w 90 -c -x -p "eventdemoapp DC Package" -f config/project-scratch-def.json 
+sf package version create -w 90 -c -x -p "eventdemoapp DC Package" -d dc-app -f config/project-scratch-def.json 
 
+sf package version create  -d data-app -w 100
 

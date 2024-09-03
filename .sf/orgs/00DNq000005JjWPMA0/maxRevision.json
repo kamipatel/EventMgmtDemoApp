@@ -67521,7 +67521,7 @@
         },
         "DataSourceObject__Registration1": {
             "serverRevisionCounter": 17650,
-            "lastRetrievedFromServer": null,
+            "lastRetrievedFromServer": 17650,
             "memberType": "DataSourceObject",
             "isNameObsolete": false
         },
@@ -88671,7 +88671,7 @@
         },
         "DataSourceObject__EventData1": {
             "serverRevisionCounter": 17667,
-            "lastRetrievedFromServer": null,
+            "lastRetrievedFromServer": 17667,
             "memberType": "DataSourceObject",
             "isNameObsolete": false
         },

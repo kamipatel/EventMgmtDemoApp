@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DataSourceObject__c</fullName>
-    <label>Data Source Object</label>
+    <fullName>eventmanageapp_Contact_c__c</fullName>
+    <label>Contact</label>
     <length>60</length>
     <mktDataModelFieldAttributes>
-        <definitionCreationType>System</definitionCreationType>
+        <definitionCreationType>Custom</definitionCreationType>
         <isDynamicLookup>false</isDynamicLookup>
-        <labelOverride>Data Source Object</labelOverride>
-        <masterLabel>Data Source Object</masterLabel>
-        <refAttrDeveloperName>DataSourceObject</refAttrDeveloperName>
+        <labelOverride>Contact</labelOverride>
+        <masterLabel>Contact</masterLabel>
         <usageTag>None</usageTag>
     </mktDataModelFieldAttributes>
     <required>false</required>
