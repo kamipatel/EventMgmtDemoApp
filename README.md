@@ -1,5 +1,3 @@
-
-
 # Authenticate devhub
 sf org login web --alias devhub --set-default
 sf config set target-dev-hub=
@@ -9,6 +7,10 @@ b1
 
 # just dc
 sf org create scratch -f config/project-scratch-def.json -a cms1 --duration-days 30 
+
+sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 30 
+00DNq000005JjWP
+
 sf org open -u cms1
 
 # deploy base 
@@ -25,7 +27,7 @@ sf project retrieve start --manifest package.xml --target-org a2
 sf project retrieve start --metadata CustomObject -r force-app --target-org b1
 
 # retriever dc 
-sf project retrieve start --manifest dcp.xml --target-org b1
+sf project retrieve start --manifest dc.xml --target-org dc1
 
 sf project retrieve start --metadata DataSource DataSrcDataModelFieldMap DataSourceBundleDefinition DataSourceObject DataStreamTemplate DataPackageKitObject 
 DataPackageKitDefinition --target-org b1
@@ -33,10 +35,11 @@ DataPackageKitDefinition --target-org b1
 
 # package create
 -- DC
-sf package create -n "eventdemoapp DC Extension Package" -r dc-app -t Managed
+sf package create -n "eventdemoapp DC Package" -r dc-app -t Managed
 0HoWt00000001ybKAA
 
 # package version
 -- DC
-sf package version create -w 90 -c -x -p "eventdemoapp DC Extension Package" -f config/project-scratch-def.json 
+sf package version create -w 90 -c -x -p "eventdemoapp DC Package" -f config/project-scratch-def.json 
+
 

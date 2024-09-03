@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">   
-    <namespacePrefix>eventmanageapp</namespacePrefix>
     <types>
         <members>*</members>
         <name>CustomField</name>
@@ -8,7 +7,6 @@
     <types>    
         <members>EventData__c</members>
         <members>Registration__c</members>
-        <members>EventReview__c</members>        
         <name>CustomObject</name>
     </types>
     <types>
@@ -30,7 +28,6 @@
 <types>
     	<members>EventData__c-EventData Layout</members>
         <members>Registration__c-Registration Layout</members>
-        <members>EventReview__c-EventReview Layout</members>
 		<name>Layout</name>
 	</types>    
    <version>62.0</version>

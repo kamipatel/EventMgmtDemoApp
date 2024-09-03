@@ -5,5 +5,11 @@
         <members>marketing/Event_Management_Demo_App</members>
         <name>DigitalExperienceBundle</name>
     </types>
+
+    <types>
+        <members>eventmanageapp__Even_Reg_form_flow</members>
+        <name>Flow</name>
+    </types>    
+
    <version>62.0</version>
 </Package>
