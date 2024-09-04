@@ -7,6 +7,10 @@
     <members>eventmanageapp__EventData__dlm</members>
     <name>CustomObject</name>
   </types>
+   <types>
+        <members>*</members>
+        <name>DataKitObjectTemplate</name>
+    </types>
   <types>
         <members>*</members>
         <name>DataKitObjectDependency</name>

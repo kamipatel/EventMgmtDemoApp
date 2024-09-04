@@ -5,5 +5,5 @@
     <masterLabel>Salesforce Connector kam company Home</masterLabel>
     <sourceObject>Registration_1725383542013</sourceObject>
     <sourceObjectType>DataStreamTemplate</sourceObjectType>
-    <targetObject>eventmanageapp__SalesforceDotCom_Home</targetObject>
+    <targetObject>SalesforceDotCom_Home</targetObject>
 </DataKitObjectDependency>
