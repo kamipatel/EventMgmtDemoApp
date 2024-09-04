@@ -8,6 +8,10 @@
     <name>CustomObject</name>
   </types>
   <types>
+        <members>*</members>
+        <name>DataKitObjectDependency</name>
+    </types> 
+  <types>
     <members>*</members>
     <name>DataSource</name>
   </types>
@@ -35,14 +39,6 @@
     <members>*</members>
     <name>DataPackageKitDefinition</name>
   </types>
-  <types>
-    <members>*</members>
-    <name>DataCalcInsightTemplate</name>
-  </types>
-  <types>
-    <members>*</members>
-    <name>DataKitObjectTemplate</name>
-  </types>
-<version>61.0</version>
+<version>62.0</version>
 </Package>
 

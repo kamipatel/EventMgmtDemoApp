@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 17682,
+    "serverMaxRevisionCounter": 17784,
     "sourceMembers": {
         "StandardValueSet__DataModelSupplierType": {
             "serverRevisionCounter": 6,
@@ -88665,7 +88665,7 @@
         },
         "DataKitObjectDependency__SalesforceDotCom_Home": {
             "serverRevisionCounter": 17666,
-            "lastRetrievedFromServer": null,
+            "lastRetrievedFromServer": 17666,
             "memberType": "DataKitObjectDependency",
             "isNameObsolete": false
         },
@@ -88755,9 +88755,147 @@
         },
         "DataKitObjectDependency__SalesforceDotCom_Home1": {
             "serverRevisionCounter": 17681,
-            "lastRetrievedFromServer": null,
+            "lastRetrievedFromServer": 17681,
             "memberType": "DataKitObjectDependency",
             "isNameObsolete": false
+        },
+        "DataSourceObject__EventReview": {
+            "serverRevisionCounter": 17784,
+            "lastRetrievedFromServer": null,
+            "memberType": "DataSourceObject",
+            "isNameObsolete": true
+        },
+        "MktDataTranObject__EventReview": {
+            "serverRevisionCounter": 17781,
+            "lastRetrievedFromServer": null,
+            "memberType": "MktDataTranObject",
+            "isNameObsolete": true
+        },
+        "CustomObject__EventReview": {
+            "serverRevisionCounter": 17782,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": true
+        },
+        "CustomObject__eventmanageapp__EventReview__dll": {
+            "serverRevisionCounter": 17783,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.IsDeleted__c": {
+            "serverRevisionCounter": 17764,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.DataSource__c": {
+            "serverRevisionCounter": 17765,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.Name__c": {
+            "serverRevisionCounter": 17766,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.SfdcOrganizationId__c": {
+            "serverRevisionCounter": 17767,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.DataSourceObject__c": {
+            "serverRevisionCounter": 17768,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.CreatedById__c": {
+            "serverRevisionCounter": 17769,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.CreatedDate__c": {
+            "serverRevisionCounter": 17770,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.SystemModstamp__c": {
+            "serverRevisionCounter": 17771,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.eventmanageapp_Registration_c__c": {
+            "serverRevisionCounter": 17772,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.LastModifiedDate__c": {
+            "serverRevisionCounter": 17773,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.KQ_Id__c": {
+            "serverRevisionCounter": 17774,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.Id__c": {
+            "serverRevisionCounter": 17775,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.eventmanageapp_Review_c__c": {
+            "serverRevisionCounter": 17776,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.LastViewedDate__c": {
+            "serverRevisionCounter": 17777,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.LastModifiedById__c": {
+            "serverRevisionCounter": 17778,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.LastReferencedDate__c": {
+            "serverRevisionCounter": 17779,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "CustomField__EventReview.cdp_sys_SourceVersion__c": {
+            "serverRevisionCounter": 17780,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": true
+        },
+        "ObjectSourceTargetMap__EventReview_map_EventReview_1725397089700": {
+            "serverRevisionCounter": 17763,
+            "lastRetrievedFromServer": null,
+            "memberType": "ObjectSourceTargetMap",
+            "isNameObsolete": false
+        },
+        "DataStreamDefinition__EventReview": {
+            "serverRevisionCounter": 17748,
+            "lastRetrievedFromServer": null,
+            "memberType": "DataStreamDefinition",
+            "isNameObsolete": true
         }
     }
 }
