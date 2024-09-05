@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>eventdk</masterLabel>
+    <parentDataPackageKitDefinitionName>mvoriginalNS__eventdk</parentDataPackageKitDefinitionName>
+    <referenceObjectName>mvoriginalNS__Registration_c_Home__dlm</referenceObjectName>
+    <referenceObjectType>MktDataModelObject</referenceObjectType>
+</DataPackageKitObject>

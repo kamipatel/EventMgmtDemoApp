@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <masterLabel>eventdkSalesforce_HomeIsDeletedRegistration_c_HomeIsDeletedEjDeKrJKChZDsgr</masterLabel>
+    <sourceField>mvoriginalNS__mvoriginalNS_Registration_c_Home1.mvoriginalNS__IsDeleted__c</sourceField>
+    <targetField>mvoriginalNS__Registration_c_Home__dlm.mvoriginalNS__IsDeleted__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

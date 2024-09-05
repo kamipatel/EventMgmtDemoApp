@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSourceBundleDefinition>eventbundle</dataSourceBundleDefinition>
+    <dataSourceObject>mvoriginalNS_EventData_c_Home1</dataSourceObject>
+    <masterLabel>mvoriginalNS__EventData__c_Home</masterLabel>
+    <objectCategory>Salesforce_SFDCReferenceModel_0_93.Related</objectCategory>
+    <refreshFrequency>STREAMING</refreshFrequency>
+    <refreshMode>UPSERT</refreshMode>
+    <sourceObjectName>mvoriginalNS__mvoriginalNS_EventData_c_Home</sourceObjectName>
+    <streamType>INGEST</streamType>
+    <templateVersion>1</templateVersion>
+</DataStreamTemplate>

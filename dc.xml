@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">   
   
-  <namespacePrefix>eventmanageapp</namespacePrefix>
+  <namespacePrefix>mvoriginalNS</namespacePrefix>
   <types>
-    <members>eventmanageapp__Registration__dlm</members>
-    <members>eventmanageapp__EventData__dlm</members>
+    <members>mvoriginalNS__EventData_c_Home__dlm</members>
+    <members>mvoriginalNS__Registration_c_Home__dlm</members>
     <name>CustomObject</name>
   </types>
    <types>
@@ -45,4 +45,3 @@
   </types>
 <version>62.0</version>
 </Package>
-
