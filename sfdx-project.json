@@ -15,16 +15,36 @@
       "default": true,
       "package": "eventdemoapp DC Package",
       "versionDescription": ""
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "v1-force-app",
+      "default": false,
+      "package": "kamEventBase",
+      "versionDescription": ""
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "tmp-dc",
+      "default": false,
+      "package": "kamEventDk",
+      "versionDescription": ""
     }
   ],
   "name": "eventmgmtdemopkg",
-  "namespace": "eventmanageapp",
+  "namespace": "mvoriginalNS",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "62.0",
   "packageAliases": {
     "eventdemoapp core Package": "0HoWs0000000KgHKAU",
     "eventdemoapp core Package@0.1.0-1": "04tWs0000005f5lIAA",
     "eventdemoapp core Package@0.1.0-2": "04tWs0000006yf7IAA",
-    "eventdemoapp DC Package": "0HoWs0000000O0jKAE"
+    "eventdemoapp DC Package": "0HoWs0000000O0jKAE",
+    "kamEventBase": "0HoWs0000000OOvKAM",
+    "kamEventBase@0.1.0-1": "04tWs00000081GfIAI",
+    "kamEventDk": "0HoWs0000000OQXKA2",
+    "kamEventDk@0.1.0-1": "04tWs00000085NVIAY"
   }
 }
