@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;connection&quot;:{&quot;connectorType&quot;:&quot;GCS&quot;,&quot;method&quot;:&quot;Ingress&quot;,&quot;credentials&quot;:[],&quot;lastModifiedDate&quot;:&quot;2024-08-21T15:55:55.000Z&quot;,&quot;editable&quot;:true,&quot;connectorLabel&quot;:&quot;Google Cloud Storage&quot;,&quot;deletable&quot;:true,&quot;lastSyncDate&quot;:&quot;2024-08-21T15:55:55.000Z&quot;,&quot;label&quot;:&quot;GCP&quot;,&quot;params&quot;:[{&quot;paramName&quot;:&quot;bucketName&quot;,&quot;value&quot;:&quot;mv-dc-test-bucket&quot;},{&quot;paramName&quot;:&quot;parentDirectory&quot;,&quot;value&quot;:&quot;data/&quot;}],&quot;url&quot;:&quot;/services/data/v62.0/ssot/connections/9cgEU00000000EXYAY&quot;,&quot;createdDate&quot;:&quot;2024-08-21T15:52:37.000Z&quot;,&quot;name&quot;:&quot;GCP&quot;,&quot;namespace&quot;:&quot;mvoriginalNS&quot;,&quot;iconUrl&quot;:&quot;/cdp/images/connectors/GCS.svg&quot;,&quot;id&quot;:&quot;9cgEU00000000EXYAY&quot;,&quot;syncStatus&quot;:&quot;InProgress&quot;,&quot;status&quot;:&quot;Active&quot;}}</entityPayload>
+    <masterLabel>GCP</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>mvoriginalNS__GCP</sourceObject>
+    <sourceObjectType>MktDataConnection</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>
