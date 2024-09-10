@@ -3,19 +3,15 @@
   
   <namespacePrefix>eventmanageapp</namespacePrefix>
   <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+  <types>
     <members>eventmanageapp__Registration__dlm</members>
     <members>eventmanageapp__EventData__dlm</members>
     <name>CustomObject</name>
   </types>
    <types>
-        <members>*</members>
-        <name>DataKitObjectTemplate</name>
-    </types>
-  <types>
-        <members>*</members>
-        <name>DataKitObjectDependency</name>
-    </types> 
-  <types>
     <members>*</members>
     <name>DataSource</name>
   </types>
@@ -40,9 +36,21 @@
     <name>DataPackageKitObject</name>
   </types>
   <types>
-    <members>*</members>
+    <members>eventdk</members>
     <name>DataPackageKitDefinition</name>
   </types>
+  <types>
+    <members>*</members>
+    <name>DataCalcInsightTemplate</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>DataKitObjectTemplate</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>DataKitObjectDependency</name>
+    </types> 
 <version>62.0</version>
 </Package>
 

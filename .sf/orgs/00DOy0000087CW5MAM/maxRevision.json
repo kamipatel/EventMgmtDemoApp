@@ -1,0 +1,275 @@
+{
+    "serverMaxRevisionCounter": 140,
+    "sourceMembers": {
+        "StandardValueSet__DataModelSupplierType": {
+            "serverRevisionCounter": 6,
+            "lastRetrievedFromServer": null,
+            "memberType": "StandardValueSet",
+            "isNameObsolete": false
+        },
+        "DataSource__SFDC_00DOy0000087CW5": {
+            "serverRevisionCounter": 7,
+            "lastRetrievedFromServer": null,
+            "memberType": "DataSource",
+            "isNameObsolete": false
+        },
+        "CustomObject__IndividualGDPRState": {
+            "serverRevisionCounter": 105,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__eventmanageapp__IndividualGDPRState__dll": {
+            "serverRevisionCounter": 104,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.Id__c": {
+            "serverRevisionCounter": 96,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.DataSource__c": {
+            "serverRevisionCounter": 88,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.DataSourceObject__c": {
+            "serverRevisionCounter": 95,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.IndividualId__c": {
+            "serverRevisionCounter": 85,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.HasOptedOutProcessing__c": {
+            "serverRevisionCounter": 101,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.OptOutProcessRequestDate__c": {
+            "serverRevisionCounter": 89,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.OptOutProcessRequestCompletionDate__c": {
+            "serverRevisionCounter": 97,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.ShouldForget__c": {
+            "serverRevisionCounter": 99,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.ShouldForgetRequestDate__c": {
+            "serverRevisionCounter": 93,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.ShouldForgetRequestCompletionDate__c": {
+            "serverRevisionCounter": 90,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.SendIndividualData__c": {
+            "serverRevisionCounter": 94,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.SendIndividualDataRequestDate__c": {
+            "serverRevisionCounter": 91,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.SendIndividualDataRequestCompletionDate__c": {
+            "serverRevisionCounter": 92,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.TenantId__c": {
+            "serverRevisionCounter": 102,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.CreatedBy__c": {
+            "serverRevisionCounter": 86,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.CreatedDate__c": {
+            "serverRevisionCounter": 100,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.LastModifiedBy__c": {
+            "serverRevisionCounter": 87,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__IndividualGDPRState.LastModifiedDate__c": {
+            "serverRevisionCounter": 98,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomObject__eventmanageapp__IndividualGDPRState__dlm": {
+            "serverRevisionCounter": 106,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "ObjectSourceTargetMap__IndividualGDPRState_map_IndividualGDPRState_1725976823830": {
+            "serverRevisionCounter": 84,
+            "lastRetrievedFromServer": null,
+            "memberType": "ObjectSourceTargetMap",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__SnapchatPlatform": {
+            "serverRevisionCounter": 125,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "AuthProvider__GoogleSegmentIntelligence": {
+            "serverRevisionCounter": 108,
+            "lastRetrievedFromServer": null,
+            "memberType": "AuthProvider",
+            "isNameObsolete": false
+        },
+        "AuthProvider__FacebookSegmentIntelligence": {
+            "serverRevisionCounter": 109,
+            "lastRetrievedFromServer": null,
+            "memberType": "AuthProvider",
+            "isNameObsolete": false
+        },
+        "PermissionSet__sfdcInternalInt__sfdc_a360_sfcrm_data_extract": {
+            "serverRevisionCounter": 112,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "DataSourceTenant__SalesforceDotCom_Home": {
+            "serverRevisionCounter": 113,
+            "lastRetrievedFromServer": null,
+            "memberType": "DataSourceTenant",
+            "isNameObsolete": false
+        },
+        "InternalDataConnector__SalesforceDotCom_Home": {
+            "serverRevisionCounter": 114,
+            "lastRetrievedFromServer": null,
+            "memberType": "InternalDataConnector",
+            "isNameObsolete": false
+        },
+        "CustomObject__EngagementAggregation": {
+            "serverRevisionCounter": 115,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__eventmanageapp__EngagementAggregation__dll": {
+            "serverRevisionCounter": 116,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.KQ_Id__c": {
+            "serverRevisionCounter": 119,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.Id__c": {
+            "serverRevisionCounter": 122,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.DataSource__c": {
+            "serverRevisionCounter": 126,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.DataSourceObject__c": {
+            "serverRevisionCounter": 128,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.LastEngagementTimestamp__c": {
+            "serverRevisionCounter": 132,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.LastModifiedBy__c": {
+            "serverRevisionCounter": 134,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EngagementAggregation.LastModifiedDate__c": {
+            "serverRevisionCounter": 136,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__LinkedIn_Advertising": {
+            "serverRevisionCounter": 121,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__dv360Platform": {
+            "serverRevisionCounter": 137,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__Google_Ads": {
+            "serverRevisionCounter": 123,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__AmazonPlatform": {
+            "serverRevisionCounter": 129,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__Meta_Conversions_API": {
+            "serverRevisionCounter": 130,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        },
+        "ActivationPlatform__cdpactvstrgptnr__Meta_Facebook": {
+            "serverRevisionCounter": 138,
+            "lastRetrievedFromServer": null,
+            "memberType": "ActivationPlatform",
+            "isNameObsolete": false
+        }
+    }
+}

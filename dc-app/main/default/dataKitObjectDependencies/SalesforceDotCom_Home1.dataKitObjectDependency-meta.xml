@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
-    <dataPackageKitDef>eventdk</dataPackageKitDef>
-    <developerName>SalesforceDotCom_Home1</developerName>
-    <masterLabel>Salesforce Connector kam company Home</masterLabel>
-    <sourceObject>EventData_1725383543987</sourceObject>
-    <sourceObjectType>DataStreamTemplate</sourceObjectType>
-    <targetObject>SalesforceDotCom_Home</targetObject>
-</DataKitObjectDependency>

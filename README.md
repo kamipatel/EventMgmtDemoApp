@@ -9,12 +9,18 @@ b1
 sf org create scratch -f config/project-scratch-def.json -a cms1 --duration-days 30 
 
 sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 30 
-00DNq000005JjWP
+
+sf org create scratch -f config/project-scratch-def.json -a dc2 --duration-days 30 
+00DOy0000087CW5
+
+sf org create scratch -f config/project-scratch-def.json -a t1 --duration-days 30 
 
 sf org open -u cms1
 
 # deploy base 
-sf project deploy start --manifest package.xml --target-org cms1
+sf project deploy start --manifest package.xml --target-org dc2
+
+sf project deploy start --manifest package.xml --target-org t1
 
 # Assign permset
 sf org assign permset --name Event_Manager_LabApp_permset --target-org b1
@@ -42,5 +48,10 @@ sf package create -n "eventdemoapp DC Package" -r dc-app -t Managed
 -- DC
 sf package version create -w 90 -c -x -p "eventdemoapp DC Package" -d dc-app -f config/project-scratch-def.json 
 
+
 sf package version create  -d data-app -w 100
 
+
+/packaging/installPackage.apexp?p0=04tWs0000006yf7IAA
+
+{!'Basic ' & BASE64ENCODE(BLOB($Credential.BillingServiceCredential.username & ':' & $Credential.BillingServiceCredential.password))}

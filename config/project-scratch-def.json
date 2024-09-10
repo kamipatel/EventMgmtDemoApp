@@ -4,10 +4,10 @@
   "features": ["CustomerDataPlatform","EnableSetPasswordInApi", "MarketingCloud"],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+      "enableS1DesktopEnabled": false
     },
     "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+      "enableS1EncryptedStoragePref2": true
     },
     "customerDataPlatformSettings": {
       "enableCustomerDataPlatform":true
