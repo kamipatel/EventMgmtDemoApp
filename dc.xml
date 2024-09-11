@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">   
-  
   <namespacePrefix>eventmanageapp</namespacePrefix>
   <types>
         <members>*</members>
         <name>CustomField</name>
     </types>
   <types>
-    <members>eventmanageapp__Registration__dlm</members>
-    <members>eventmanageapp__EventData__dlm</members>
+    <members>Registration__dlm</members>
+    <members>EventData__dlm</members>
     <name>CustomObject</name>
   </types>
    <types>
