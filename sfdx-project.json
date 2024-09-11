@@ -4,7 +4,7 @@
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
-      "default": true,
+      "default": false,
       "package": "eventdemoapp core Package",
       "versionDescription": ""
     },
@@ -12,7 +12,7 @@
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
       "path": "dc-app",
-      "default": false,
+      "default": true,
       "package": "eventdemoapp DC Package",
       "versionDescription": ""
     }

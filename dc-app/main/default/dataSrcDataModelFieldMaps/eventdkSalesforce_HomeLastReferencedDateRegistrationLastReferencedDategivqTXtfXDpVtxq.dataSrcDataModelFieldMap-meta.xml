@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <masterLabel>eventdkSalesforce_HomeLastReferencedDateRegistrationLastReferencedDategivqTXtfXDpVtxq</masterLabel>
+    <sourceField>eventmanageapp__Registration1.eventmanageapp__LastReferencedDate__c</sourceField>
+    <targetField>eventmanageapp__Registration__dlm.eventmanageapp__LastReferencedDate__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>
