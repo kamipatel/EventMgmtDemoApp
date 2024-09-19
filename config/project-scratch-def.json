@@ -1,10 +1,10 @@
 {
   "orgName": "kam company",
-  "edition": "Enterprise",
-  "features": ["CustomerDataPlatform","EnableSetPasswordInApi", "MarketingCloud"],
+  "edition": "Developer",
+  "features": ["CustomerDataPlatform","EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": false
+      "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": true

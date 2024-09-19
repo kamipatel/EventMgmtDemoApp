@@ -1,9 +1,20 @@
 # Authenticate devhub
+# Sign in with YOUR_DEVHUB_ORG_USERNAME
 sf org login web --alias devhub --set-default
-sf config set target-dev-hub=
+sf config set target-dev-hub=REPLACE_WITH_YOUR_DEVHUB_ORG_USERNAME
 
-# past orgs
-b1
+# Create scratch org
+sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 30 
+
+# deploy sample event management lightning app
+sf project deploy start --manifest package.xml --target-org dc1
+
+# Assign permset
+sf org assign permset --name Event_Manager_LabApp_permset --target-org dc1
+
+# Open the org and add some event, registration data
+sf org open -u dc1
+
 
 # just dc
 sf org create scratch -f config/project-scratch-def.json -a cms1 --duration-days 30 
@@ -22,8 +33,6 @@ sf project deploy start --manifest package.xml --target-org dc2
 
 sf project deploy start --manifest package.xml --target-org t1
 
-# Assign permset
-sf org assign permset --name Event_Manager_LabApp_permset --target-org b1
 
 # retriever form 
 sf project retrieve start --manifest cms.xml --target-org cms1
@@ -52,7 +61,11 @@ sf package version create -w 90 -x -p "eventdemoapp DC Package" -d dc-app -f con
 
 sf package version create  -d data-app -w 100
 
+# package version promote
+sf package version promote --package 04tWs0000006yf7IAA
+
 
 /packaging/installPackage.apexp?p0=04tWs0000006yf7IAA
+
 
 {!'Basic ' & BASE64ENCODE(BLOB($Credential.BillingServiceCredential.username & ':' & $Credential.BillingServiceCredential.password))}

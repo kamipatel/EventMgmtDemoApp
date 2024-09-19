@@ -3,7 +3,7 @@
     <dataPackageKitDef>eventdk</dataPackageKitDef>
     <developerName>SalesforceDotCom_Home</developerName>
     <masterLabel>Salesforce Connector kam company Home</masterLabel>
-    <sourceObject>Registration_1725981942457</sourceObject>
+    <sourceObject>EventData_1726582979172</sourceObject>
     <sourceObjectType>DataStreamTemplate</sourceObjectType>
     <targetObject>SalesforceDotCom_Home</targetObject>
 </DataKitObjectDependency>

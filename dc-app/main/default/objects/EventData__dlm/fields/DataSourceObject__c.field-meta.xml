@@ -8,7 +8,6 @@
         <isDynamicLookup>false</isDynamicLookup>
         <labelOverride>Data Source Object</labelOverride>
         <masterLabel>Data Source Object</masterLabel>
-        <refAttrDeveloperName>DataSourceObject</refAttrDeveloperName>
         <usageTag>None</usageTag>
     </mktDataModelFieldAttributes>
     <required>false</required>

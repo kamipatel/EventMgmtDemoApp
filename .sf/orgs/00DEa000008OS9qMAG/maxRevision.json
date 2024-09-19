@@ -1,0 +1,143 @@
+{
+    "serverMaxRevisionCounter": 26,
+    "sourceMembers": {
+        "CustomField__EventReview__c.Registration__c": {
+            "serverRevisionCounter": 1,
+            "lastRetrievedFromServer": 1,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomObject__EventReview__c": {
+            "serverRevisionCounter": 13,
+            "lastRetrievedFromServer": 13,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomField__EventData__c.Cost__c": {
+            "serverRevisionCounter": 3,
+            "lastRetrievedFromServer": 3,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EventData__c.Event_Datetime__c": {
+            "serverRevisionCounter": 4,
+            "lastRetrievedFromServer": 4,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EventData__c.Status__c": {
+            "serverRevisionCounter": 5,
+            "lastRetrievedFromServer": 5,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__EventReview__c.Review__c": {
+            "serverRevisionCounter": 6,
+            "lastRetrievedFromServer": 6,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Registration__c.Contact__c": {
+            "serverRevisionCounter": 7,
+            "lastRetrievedFromServer": 7,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomObject__Registration__c": {
+            "serverRevisionCounter": 14,
+            "lastRetrievedFromServer": 14,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomField__Registration__c.EventData__c": {
+            "serverRevisionCounter": 9,
+            "lastRetrievedFromServer": 9,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Registration__c.Status__c": {
+            "serverRevisionCounter": 11,
+            "lastRetrievedFromServer": 11,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomObject__EventData__c": {
+            "serverRevisionCounter": 12,
+            "lastRetrievedFromServer": 12,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "ListView__EventData__c.All": {
+            "serverRevisionCounter": 15,
+            "lastRetrievedFromServer": 15,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__EventReview__c.All": {
+            "serverRevisionCounter": 16,
+            "lastRetrievedFromServer": 16,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Registration__c.All": {
+            "serverRevisionCounter": 17,
+            "lastRetrievedFromServer": 17,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "Layout__EventData__c-EventData Layout": {
+            "serverRevisionCounter": 18,
+            "lastRetrievedFromServer": 18,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__EventReview__c-EventReview Layout": {
+            "serverRevisionCounter": 19,
+            "lastRetrievedFromServer": 19,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Registration__c-Registration Layout": {
+            "serverRevisionCounter": 20,
+            "lastRetrievedFromServer": 20,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "FlexiPage__Event_Management_App_UtilityBar": {
+            "serverRevisionCounter": 21,
+            "lastRetrievedFromServer": 21,
+            "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "CustomTab__EventData__c": {
+            "serverRevisionCounter": 22,
+            "lastRetrievedFromServer": 22,
+            "memberType": "CustomTab",
+            "isNameObsolete": false
+        },
+        "CustomTab__EventReview__c": {
+            "serverRevisionCounter": 23,
+            "lastRetrievedFromServer": 23,
+            "memberType": "CustomTab",
+            "isNameObsolete": false
+        },
+        "CustomTab__Registration__c": {
+            "serverRevisionCounter": 24,
+            "lastRetrievedFromServer": 24,
+            "memberType": "CustomTab",
+            "isNameObsolete": false
+        },
+        "CustomApplication__Event_Management_App": {
+            "serverRevisionCounter": 25,
+            "lastRetrievedFromServer": 25,
+            "memberType": "CustomApplication",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Event_Manager_LabApp_permset": {
+            "serverRevisionCounter": 26,
+            "lastRetrievedFromServer": 26,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        }
+    }
+}

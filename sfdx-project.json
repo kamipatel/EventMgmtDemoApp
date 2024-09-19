@@ -14,12 +14,7 @@
       "path": "dc-app",
       "default": true,
       "package": "eventdemoapp DC Package",
-      "versionDescription": "",
-      "dependencies": [
-        {
-          "package": "04tWs0000006yf7IAA"
-        }
-      ]
+      "versionDescription": ""
     }
   ],
   "name": "eventmgmtdemopkg",
