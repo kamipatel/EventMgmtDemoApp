@@ -5,7 +5,7 @@
       "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
       "default": false,
-      "package": "eventdemoapp core Package",
+      "package": "eventdemoapp core demo Package",
       "versionDescription": ""
     },
     {
@@ -13,7 +13,7 @@
       "versionNumber": "0.1.0.NEXT",
       "path": "dc-app",
       "default": true,
-      "package": "eventdemoapp DC Package",
+      "package": "eventdemoapp DC ext Package",
       "versionDescription": ""
     }
   ],
@@ -22,9 +22,9 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "61.0",
   "packageAliases": {
-    "eventdemoapp core Package": "0HoWs0000000KgHKAU",
-    "eventdemoapp core Package@0.1.0-1": "04tWs0000005f5lIAA",
-    "eventdemoapp core Package@0.1.0-2": "04tWs0000006yf7IAA",
-    "eventdemoapp DC Package": "0HoWs0000000O0jKAE"
+    "eventdemoapp core demo Package": "0HoWs0000000SSXKA2",
+    "eventdemoapp core demo Package@0.1.0-1": "04tWs000000AsrxIAC",
+    "eventdemoapp DC ext Package": "0HoWs0000000Sp7KAE",
+    "eventdemoapp DC ext Package@0.1.0-1": "04tWs000000Az8fIAC"
   }
 }
