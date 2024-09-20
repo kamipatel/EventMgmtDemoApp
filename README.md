@@ -15,10 +15,9 @@ TBD
 
 # Setup
 ### Authenticate devhub
-** Authenticate devhub **
-Sign in with YOUR_DEVHUB_ORG_USERNAME
-sf org login web --alias devhub --set-default
-sf config set target-dev-hub=REPLACE_WITH_YOUR_DEVHUB_ORG_USERNAME
+- Sign in with YOUR_DEVHUB_ORG_USERNAME
+- sf org login web --alias devhub --set-default
+- sf config set target-dev-hub=REPLACE_WITH_YOUR_DEVHUB_ORG_USERNAME
 
 # Lightning_app
 # Create scratch org for CRM + DC
