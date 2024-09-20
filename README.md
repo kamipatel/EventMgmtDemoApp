@@ -8,6 +8,10 @@ This app demonstrates how existing force.com app can be extended for data cloud 
 3. [DataCloudApp](#DataCloudApp)
 4. [MarketingCloudApp](#MarketingCloudApp)
 
+# Prerequisite
+- Make sure your DevHub org is enabled for data cloud package creation
+- You have linked your namespace org to the DevHub org
+- You can use this app as a reference app. Make sure to replace namespace in sfdx-project.json
 
 # Setup
 ### Authenticate devhub
@@ -54,3 +58,7 @@ sf package version promote --package=04tWs000000Az8fIAC
 /packaging/installPackage.apexp?p0=04tWs000000Az8fIAC
 
 ```
+
+# MarketingCloudApp
+### Steps to create Marketing cloud CMS managed package, coming soon
+
