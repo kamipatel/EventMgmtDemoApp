@@ -8,10 +8,15 @@ This app demonstrates how existing force.com app can be extended for data cloud 
 3. [DataCloudApp](#DataCloudApp)
 4. [MarketingCloudApp](#MarketingCloudApp)
 
+# About
+- In this excecise we will create force.com, data cloud and Marketing cloud packages.
+
 # Prerequisite
 - Make sure your DevHub org is enabled for data cloud package creation
 - You have linked your namespace org to the DevHub org
 - You can use this app as a reference app. Make sure to replace namespace in sfdx-project.json
+- You have completed trailheads on 2GP packaging
+- You know how to setup Data cloud and Marketing cloud
 
 # Setup
 ### Authenticate devhub
@@ -28,11 +33,10 @@ sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 
 EventData, Registration 
 # Now let's build core package for 2 custom objects and retrieve CRM sObjects (along with other needed artifacts e.g. permset, app etc)
 sf project retrieve start --manifest package.xml --target-org dc1
-# package create CRM
+# Create Package CRM
 sf package create -n "eventdemoapp core demo Package" -r force-app -t Managed
-# package version CRM
+# Create Package version CRM
 sf package version create -w 90 -c -x -p "eventdemoapp core demo Package" -d force-app -f config/project-scratch-def.json 
-    # when needed add -skipancestorcheck flag to above
 # package version promote CRM
 sf package version promote --package=04tWs000000AsrxIAC
 # package version install in subscriber org
@@ -47,11 +51,10 @@ sf package version promote --package=04tWs000000AsrxIAC
 # First update "Data Cloud Salesforce Connector" permissionset to give read perms (Read, View All, all fields) to both CRM sObjects i.e. EventData, Registration
 # In the same org, 
 sf project retrieve start --manifest dc.xml --target-org dc1
-# package create DC
+# Create Package DC
 sf package create -n "eventdemoapp DC ext Package" -r dc-app -t Managed
-# package version DC
+# Create package version DC
 sf package version create -w 90 -c -x -p "eventdemoapp DC ext Package" -d dc-app -f config/project-scratch-def.json 
-    # when needed add -skipancestorcheck flag to above. Also "ancestorVersion": "HIGHEST" if needed
 # package version promote DC
 sf package version promote --package=04tWs000000Az8fIAC
 # package version install in subscriber org
@@ -60,5 +63,17 @@ sf package version promote --package=04tWs000000Az8fIAC
 ```
 
 # MarketingCloudApp
-### Steps to create Marketing cloud CMS managed package, coming soon
-
+### Steps to create Marketing cloud CMS managed package
+```
+# In the same org, configure the Marketing cloud if not done already. Under CMS create email, landing page and a form
+# Get metadata
+sf project retrieve start --manifest cms.xml --target-org dc1
+# Create package CMS
+sf package create -n "eventdemoapp CMS ext Package" -r dc-app -t Managed
+# Create package version CMS
+sf package version create -w 90 -c -x -p "eventdemoapp DC CMS Package" -d force-app -f config/project-scratch-def.json 
+# package version promote DC
+sf package version promote --package=04tWs000000Az8fIAC
+# package version install in subscriber org
+/packaging/installPackage.apexp?p0=04tWs000000Az8fIAC
+```
