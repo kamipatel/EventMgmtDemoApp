@@ -1,32 +1,26 @@
-# Project Title
-Event Management Sample App
-
+# Event Management Sample App
 This app demonstrates how existing force.com app can be extended for data cloud and Marketing cloud
 
 ## Table of Contents
 
 1. [Setup](#Setup)
-2. [Lightning App](#Lightning app)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact](#contact)
+2. [LightningApp](#LightningApp)
+3. [DataCloudApp](#DataCloudApp)
+4. [MarketingCloudApp](#MarketingCloudApp)
 
 ## About
-
-Give a brief overview of the project, its goals, and the problem it solves. Include key technologies used, inspiration, or relevant links.
-
+TBD
 
 
 
 # Setup
-# Authenticate devhub
-# Sign in with YOUR_DEVHUB_ORG_USERNAME
+### Authenticate devhub
+** Authenticate devhub **
+Sign in with YOUR_DEVHUB_ORG_USERNAME
 sf org login web --alias devhub --set-default
 sf config set target-dev-hub=REPLACE_WITH_YOUR_DEVHUB_ORG_USERNAME
 
-# Lightning app
+# Lightning_app
 # Create scratch org for CRM + DC
 sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 30 
 
