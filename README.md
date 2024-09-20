@@ -20,14 +20,12 @@ TBD
 - sf config set target-dev-hub=REPLACE_WITH_YOUR_DEVHUB_ORG_USERNAME
 
 # Lightning_app
+```Steps to create Lightning app managed package
 # Create scratch org for CRM + DC
 sf org create scratch -f config/project-scratch-def.json -a dc1 --duration-days 30 
-
 # In CRM Create 2 custom objects i.e.
 EventData, Registration 
-
-# Now let's build core package for 2 custom objects
-# retrieve CRM sObjects (along with other needed artifacts e.g. permset, app etc)
+# Now let's build core package for 2 custom objects and retrieve CRM sObjects (along with other needed artifacts e.g. permset, app etc)
 sf project retrieve start --manifest package.xml --target-org dc1
 # package create CRM
 sf package create -n "eventdemoapp core demo Package" -r force-app -t Managed
