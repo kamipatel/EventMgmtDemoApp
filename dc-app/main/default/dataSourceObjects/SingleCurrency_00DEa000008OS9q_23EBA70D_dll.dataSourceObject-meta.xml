@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSource>SingleCurrency_00DEa000008OS9q_36e2165b_1f49_4ea6_be0d_0d6b9c7d270f</dataSource>
+    <externalRecordIdentifier>SingleCurrency_00DEa000008OS9q_CurrencyType_23EBA70D</externalRecordIdentifier>
+    <masterLabel>SingleCurrency_00DEa000008OS9q_CurrencyType_23EBA70D</masterLabel>
+    <templateVersion>1</templateVersion>
+</DataSourceObject>

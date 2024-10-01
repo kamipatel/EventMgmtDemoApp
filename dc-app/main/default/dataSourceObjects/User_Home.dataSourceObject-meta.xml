@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSource>Salesforce_Home</dataSource>
+    <externalRecordIdentifier>User</externalRecordIdentifier>
+    <masterLabel>User</masterLabel>
+    <templateVersion>1</templateVersion>
+</DataSourceObject>

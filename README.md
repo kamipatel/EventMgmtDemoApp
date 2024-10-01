@@ -47,18 +47,21 @@ sf package version promote --package=04tWs000000AsrxIAC
 ### Steps to create Data cloud datakit managed package
 ```
 # Now let's build data cloud package for 2 DLO/DMO for CRM's 2 custom objects
+# First open the org
+sf org open -u dc1
 # Configure the data cloud
 # First update "Data Cloud Salesforce Connector" permissionset to give read perms (Read, View All, all fields) to both CRM sObjects i.e. EventData, Registration
 # In the same org, 
 sf project retrieve start --manifest dc.xml --target-org dc1
 # Create Package DC
-sf package create -n "eventdemoapp DC ext Package" -r dc-app -t Managed
+sf package create -n "eventdemoapp datacloud Package" -r dc-app -t Managed
 # Create package version DC
-sf package version create -w 90 -c -x -p "eventdemoapp DC ext Package" -d dc-app -f config/project-scratch-def.json 
+sf package version create -w 90 -c -x -p "eventdemoapp datacloud Package" -d dc-app -f config/project-scratch-def.json 
 # package version promote DC
 sf package version promote --package=04tWs000000Az8fIAC
 # package version install in subscriber org
 /packaging/installPackage.apexp?p0=04tWs000000Az8fIAC
+
 
 ```
 

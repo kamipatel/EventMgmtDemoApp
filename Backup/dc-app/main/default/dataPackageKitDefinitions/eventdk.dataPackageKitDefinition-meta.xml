@@ -5,5 +5,5 @@
     <isDeployed>false</isDeployed>
     <isEnabled>false</isEnabled>
     <masterLabel>eventdk</masterLabel>
-    <versionNumber>3.0</versionNumber>
+    <versionNumber>2.0</versionNumber>
 </DataPackageKitDefinition>

@@ -13,7 +13,7 @@
       "versionNumber": "0.1.0.NEXT",
       "path": "dc-app",
       "default": true,
-      "package": "eventdemoapp DC ext Package",
+      "package": "eventdemoapp datacloud Package",
       "versionDescription": ""
     }
   ],
@@ -24,7 +24,7 @@
   "packageAliases": {
     "eventdemoapp core demo Package": "0HoWs0000000SSXKA2",
     "eventdemoapp core demo Package@0.1.0-1": "04tWs000000AsrxIAC",
-    "eventdemoapp DC ext Package": "0HoWs0000000Sp7KAE",
-    "eventdemoapp DC ext Package@0.1.0-1": "04tWs000000Az8fIAC"
+    "eventdemoapp datacloud Package": "0HoWs0000000VWrKAM",
+    "eventdemoapp datacloud Package@0.1.0-1": "04tWs000000CIijIAG"
   }
 }
