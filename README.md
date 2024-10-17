@@ -42,6 +42,8 @@ sf package version promote --package=04tWs000000AsrxIAC
 # package version install in subscriber org
 /packaging/installPackage.apexp?p0=04tWs000000AsrxIAC
 ```
+/packaging/installPackage.apexp?p0=04tWs000000AsrxIAC
+/packaging/installPackage.apexp?p0=04tWs000000AsrxIAC
 
 # DataCloudApp
 ### Steps to create Data cloud datakit managed package
@@ -60,7 +62,7 @@ sf package version create -w 90 -c -x -p "eventdemoapp datacloud Package" -d dc-
 # package version promote DC
 sf package version promote --package=04tWs000000Az8fIAC
 # package version install in subscriber org
-/packaging/installPackage.apexp?p0=04tWs000000Az8fIAC
+/packaging/installPackage.apexp?p0=04tWs000000CIijIAG
 
 
 ```
