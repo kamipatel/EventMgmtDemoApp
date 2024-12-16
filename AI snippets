@@ -1,0 +1,320 @@
+
+AI snippet for passing 5K records
+{!$Organization.CreatedDate}
+Following is IoT data in csv format. Can you check temperature anomaly and give me row_ids only in csv format?
+
+Iot Apex class
+
+
+CSV version
+public class FetchIotData {
+
+// Function to remove the decimal part from a number string
+    public static String removeDecimalPart(String numberWithDecimal) {
+        // Find the position of the decimal point
+        Integer decimalPosition = numberWithDecimal.indexOf('.');
+        
+        // Extract the part before the decimal point
+        String numberWithoutDecimal = numberWithDecimal;
+        if (decimalPosition != -1) {
+            numberWithoutDecimal = numberWithDecimal.substring(0, decimalPosition);
+        }
+        
+        // Return the result
+        return numberWithoutDecimal;
+    }
+
+// Method to export records to CSV
+    public static String exportToCSV(List<ConnectApi.CdpQueryV2Row> records) {
+                
+    
+        if (records == null || records.isEmpty()) {
+            return '';
+        }
+
+
+        // Create the CSV header
+        String csvString = 'id__c, temperature, humidity, gas, pressure' + '\n';                                     
+
+        // Iterate through each record
+        // select id__c, weather_tem__c, weather_hum__c, weather_gas__c,weather_pre__c 
+        for (ConnectApi.CdpQueryV2Row record : records){ 
+                
+            //String row = '\'' + (String)record.rowData[0] + '\'' + ',' + ((Decimal) record.rowData[1]).setScale(0).toString() + ',' + ((Decimal) record.rowData[2]).setScale(0).toString() + ',' + ((Decimal) record.rowData[3]).setScale(0).toString() + ',' + ((Decimal) record.rowData[4]).setScale(0).toString();                                    
+            String row = (String)record.rowData[0] + ',' + removeDecimalPart(record.rowData[1].toString()) + ',' +  removeDecimalPart(record.rowData[2].toString()) + ',' +  removeDecimalPart(record.rowData[3].toString()) + ',' +  removeDecimalPart(record.rowData[4].toString());                                                
+            csvString += row + '\n';
+        }
+
+        return csvString;
+    }
+
+    // Expose this Action to the Flow
+     @InvocableMethod(label='Fetch Iot Data' description='Fetch Iot Data')   
+    public static List<String> getData(List<String> indata) {
+
+        // Prepare the response to send back to the Flow
+
+        List<String> responseWrapper = new List<String>();
+         
+        ConnectApi.CdpQueryInput input = new ConnectApi.CdpQueryInput();
+        // input.sql = 'select device_id__c, id__c, weather_tem__c, weather_hum__c, weather_gas__c,weather_pre__c from golioth_iot_stream__dlm ORDER BY created_datetime__c DESC limit 100';
+        input.sql = 'select id__c, weather_tem__c, weather_hum__c, weather_gas__c,weather_pre__c from golioth_iot_stream__dlm ORDER BY created_datetime__c DESC limit 1000';
+        System.debug('query=' + input.sql);
+        
+        ConnectApi.CdpQueryOutputV2 output = ConnectApi.CdpQuery.queryAnsiSqlV2(input);
+        
+        String rec ;
+
+        String csvContent =  exportToCSV(output.data);
+        System.debug(csvContent);
+                          
+        responseWrapper.add(csvContent);
+ 
+        // Return values back to the Flow
+        return responseWrapper;
+    }          
+}
+
+
+
+public class ProcessIotAnomaly {
+
+
+/*
+List<String> data = new List<String>();
+String csv = 'recordId,anomalyColumn,anomalyValue,anomalyType \n \'24cbe290-2f44-4feb-8433-57ee85c675a7\',gas,36418,HIGHER \n \'c15a702d-b26e-4d8e-a86b-15e023a6d240\',humidity,57,HIGHER';
+data.add(csv);
+ProcessIotAnomaly.processIotAnomalyData(data);
+*/
+
+
+// Method to parse CSV string and return a list of Account objects
+    public static List< Iot_Anomaly__c> parseCSV(String csvString) {
+    
+        Log__c log = new Log__c ();
+        log.log__c = csvString;
+        insert log;
+    
+        List< Iot_Anomaly__c> ias = new List<Iot_Anomaly__c>();
+        List<String> rows = csvString.split('\n');
+                
+        // Assume the first row is the header
+        if (rows.size() > 0) {
+            // Iterate over each row after the header
+            for (Integer i = 1; i < rows.size(); i++) {
+                String row = rows[i];
+        
+                List<String> columns = row.split(',');
+                
+                // Ensure the row has the correct number of columns
+                if (columns.size() > 1) {
+                    Iot_Anomaly__c ia = new Iot_Anomaly__c();
+                    ia.Name = columns[0];                   
+                    
+                    switch on columns[1] {
+                        when 'gas' {
+                            ia.Gas_Anomaly__c=true;
+                        }
+                        when 'temperature' {
+                            ia.Temperature_Anomaly__c = true;
+                        }
+                        when 'humidity' {
+                            ia.Humidity_Anomaly__c = true;
+                        }
+                        when 'pressure' {
+                            ia.Pressure_Anomaly__c = true;
+                        }
+                    }
+                                                            
+                    
+                    ias.add(ia);
+                    
+                } else {
+                    System.debug('Row ' + i + ' has an incorrect number of columns: ' + row);
+                }
+            }
+        } else {
+            System.debug('CSV string is empty or does not contain any data rows.');
+        }
+        
+        return ias;
+    }
+
+    // Expose this Action to the Flow
+     @InvocableMethod(label='Process Iot Anomaly Data' description='Process Iot Anomaly Data')   
+    public static List<String> processIotAnomalyData(List<String> indata) {
+
+        // Prepare the response to send back to the Flow
+        List<String> responseWrapper = new List<String>();
+
+       List<Iot_Anomaly__c> ias = parseCSV(indata[0]);
+        
+        // Insert accounts into Salesforce
+        try {
+            
+            upsert ias Name;
+            
+            System.debug('IoT Anomaly upserted successfully.');
+        } catch (DmlException e) {
+            System.debug('An error occurred while IoT Anomaly upsert ' + e.getMessage());
+        }
+        
+        responseWrapper.add(ias.size().toString());        
+ 
+        // Return values back to the Flow
+        return responseWrapper;
+    }          
+}
+
+Cleanup
+
+
+List<Log__c> data = new List<Log__c>();
+data = [select Id from Log__c];
+delete data;
+
+List<Iot_Anomaly__c > data2 = new List<Iot_Anomaly__c >();
+data2 = [select Id from Iot_Anomaly__c ];
+delete data2;
+
+Flow
+
+public class CallIoTAnomalyFlow {
+
+    // Expose this Action to the Flow
+     @InvocableMethod(label='Call Iot Anomaly Flow' description='Call Iot Anomaly Flow')   
+    public static void callIotAnomalyFlow() {
+     
+      FutureIoTAnomalyDetectionFlowCall.callFlow('future');        
+        System.debug('callIotAnomalyFlow called');
+        
+    }          
+}
+
+global class FutureIoTAnomalyDetectionFlowCall
+{
+    @future
+    public static void callFlow(String t)
+    {   
+    
+        Map<String, Object> inputs = new Map<String, Object>();
+    
+            // Instantiate the Flow.Interview class with the API name of your Flow
+        Flow.Interview myFlow = Flow.Interview.createInterview('Call_IoT_Anomaly_prompt', inputs);
+        myFlow.start();
+
+
+    }
+}
+
+
+Copilot
+all events 
+send to slack each event separately
+
+
+public class EventMgmtAppQueryAction {
+
+  @InvocableMethod(label='Get Events' description='Returns the list of events' category='EventManagement')  
+  public static List<String> getEvents(List<String> whichobject) {
+  
+    List< eventmgrlabapp__EventData__c > events = [SELECT Name, eventmgrlabapp__Capacity__c, eventmgrlabapp__Event_Type__c, eventmgrlabapp__Cost__c, zip__c, eventmgrlabapp__Start_datetime__c  FROM eventmgrlabapp__EventData__c LIMIT 200];
+    
+    String jsonOutput = JSON.serializePretty(events);
+    
+    System.debug(jsonOutput);
+    
+    List<String> outjson = new List<String>();
+    outjson.add(jsonOutput);
+    
+    return outjson;
+  }
+  
+  
+}
+
+
+
+Here are the Events {!$Flow:GetEventsForPrompt.Prompt}. 
+In each record for zip field add 00 in front
+Can you convert the  Events json to Slack block Kit format?  Convert each event as a section and also can you add blockkit divider {"type": "divider"} between each event ?
+{"blocks": [
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Name*\n eventmgrlabapp__Event_Type__c\n"
+            }    
+    }
+    ]
+}
+}
+
+Just give me json
+
+You are an event manager. Here are the Events {!$Flow:GetEventsForPrompt.Prompt}.
+For each event perform following task
+Call Send to slack {!$Flow:Send_to_Slack_From_Prompt.Prompt} with message "wow"
+
+
+public class WeatherDataAll {
+
+
+    // Expose this Action to the Flow
+     @InvocableMethod(label='Get Weather Action' description='Get All Weather Data')   
+    public static List<List<WeatherRecord>> getAll(List<String> indata) {
+
+        // Prepare the response to send back to the Flow
+
+        List<List<WeatherRecord>> responseWrapper = new List<List<WeatherRecord>>();
+ 
+        
+        ConnectApi.CdpQueryInput input = new ConnectApi.CdpQueryInput();
+        input.sql = 'select zip__c, forecast_date__c, weather_forecast__c from SnowflakeWeatherTable2DMO__dlm limit 100';
+        System.debug('query=' + input.sql);
+        
+        ConnectApi.CdpQueryOutputV2 output = ConnectApi.CdpQuery.queryAnsiSqlV2(input);
+        
+        List<WeatherRecord> collectionOutput = new List<WeatherRecord>();
+        for (ConnectApi.CdpQueryV2Row row : output.data){
+            WeatherRecord response = new WeatherRecord();
+            response.zip = (String)row.rowData[0];
+            response.forecastDate = (String)row.rowData[1];
+            response.forecast = (String)row.rowData[2];
+
+            collectionOutput.add(response);
+        }            
+               
+         
+        responseWrapper.add(collectionOutput);
+ 
+        // Return values back to the Flow
+        return responseWrapper;
+    }          
+}
+
+// Attributes passed back to the Flow
+    public class WeatherRecord{
+    
+        @AuraEnabled
+        @InvocableVariable(label='zip' description='zip')
+        public String zip;
+
+        @AuraEnabled
+        @InvocableVariable(label='forecastDate' description='forecastDate')
+        public String forecastDate;     
+        
+        @AuraEnabled
+        @InvocableVariable(label='forecast' description='forecast')
+        public String forecast;    
+    }
+    
+
+
+RAG query
+select v.score__c Score__c, r.eventmgrlabapp__Event_Id__c Id__c, r.eventmgrlabapp__Event_Name__c FROM vector_search(table(EventData_vector__dlm), 'austin', '', 2000) v JOIN EventData_chunk__dlm rc ON v.RecordId__c = rc.RecordId__c JOIN eventmgrlabapp__EventData__dlm r ON rc.SourceRecordId__c = r.eventmgrlabapp__Event_Id__c
+
+select v.score__c Score__c, r.Id__c Id__c, r.review_c__c review__c FROM vector_search(table(EventReviews_vector__dlm), 'show me reviews with missed flights', '', 2000) v JOIN EventReviews_chunk__dlm rc ON v.RecordId__c = rc.RecordId__c JOIN EventReviews__dlm r ON rc.SourceRecordId__c = r.Id__c
