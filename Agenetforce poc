@@ -1,0 +1,134 @@
+Agentforce POC epic.37591727992655637@orgfarm.th
+https://d6e0000018isceae-dev-ed.develop.my.salesforce.com
+orgid - 00D6e0000018Isc
+
+Postman desktop redirect url in connected app
+https://oauth.pstmn.io/v1/callback
+
+SOQL + Data cloud
+MessagingSession
+select ConversationId from MessagingSession where Id='0MwWs000001lDxPKAU'
+0dwWs000002o3JJIAY
+
+select ConversationIdentifier from Conversation where Id='0dwWs000002o3JJIAY'
+ffe98528-c4c2-445d-8359-f552fcf9a85b
+
+select MessageIdentifier,Seq,ActorType from ConversationEntry where ConversationId='0dwWs000002o3JJIAY' limit 200 
+
+Data cloud query
+SELECT
+"ssot__ClientDateTime__c",
+"ssot__EngagementParticipantId__c",
+"ssot__PayloadText__c",
+"ssot__TranscriptedDateTime__c",
+"ssot__ExternalRecordId__c"
+FROM "ssot__ConversationEntry__dlm"
+where ssot__ConversationId__c='ffe98528-c4c2-445d-8359-f552fcf9a85b' and ssot__ConversationEntryType__c='Message'
+order by ssot__TranscriptedDateTime__c ASC
+
+Note:
+ssot__ConversationEntry__dlm:: ssot__ExternalRecordId__c == ConversationEntry::MessageIdentifier
+
+
+
+
+String msId = '0MwWs000001lDxPKAU';
+MessagingSession me = [SELECT Id, Conversation.Id, Conversation.ConversationIdentifier FROM MessagingSession WHERE Id=: msId];
+System.debug('me=' + me);
+
+String conversationId = me.Conversation.Id;
+System.debug(conversationId);
+
+String conversationIdentifier = me.Conversation.ConversationIdentifier;
+System.debug('ConversationIdentifier=' + conversationIdentifier);
+
+List <ConversationEntry> entries = [select ConversationId, MessageIdentifier,Seq,ActorType from ConversationEntry where ConversationId=: conversationId ORDER BY Seq ASC]; 
+System.debug('entries=' + entries);
+
+/*
+// Create a Map with MessageIdentifier as the key and ConversationEntry as the value
+Map<String, ConversationEntry> entryMap = new Map<String, ConversationEntry>();
+
+// Iterate over the entries list and populate the map
+for (ConversationEntry entry : entries) {
+    entryMap.put(entry.MessageIdentifier, entry);
+}
+System.debug(entryMap);
+
+*/
+
+// Now entryMap contains MessageIdentifier as the key and the corresponding ConversationEntry as the value
+
+ConnectApi.CdpQueryInput input = new ConnectApi.CdpQueryInput();
+input.sql = 'SELECT ssot__ExternalRecordId__c, ssot__PayloadText__c FROM ssot__ConversationEntry__dlm where ssot__ConversationId__c=\'' + conversationIdentifier + '\' and ssot__ConversationEntryType__c=\'Message\'';
+
+System.debug('query=' + input.sql);
+
+ConnectApi.CdpQueryOutputV2 output = ConnectApi.CdpQuery.queryAnsiSqlV2(input);
+System.debug('output=' + output);
+
+
+Map<String, String> ceMap = new Map<String, String>();
+for (ConnectApi.CdpQueryV2Row record : output.data){ 
+    System.debug('Got dc record=' + record);
+    ceMap.put((String)record.rowData[0], (String)record.rowData[1]);
+
+}
+System.debug('ceMap=' + ceMap);
+
+for (ConversationEntry entry : entries) {
+//    System.debug('entry.MessageIdentifier=' + entry.MessageIdentifier);
+    String msg = ceMap.get(entry.MessageIdentifier);
+    if(msg != null){
+        System.debug('msg=' + msg);
+        System.debug('ActorType=' + entry.ActorType);
+    }
+}
+
+
+
+
+
+
+
+Open AI key
+
+
+Get Conversation Messages using connect api
+https://developer.salesforce.com/docs/atlas.en-us.252.0.voice_developer_guide.meta/voice_developer_guide/voice_connect_overview.htm
+
+{{_endpoint}}/services/data/v{{version}}/query/?q=SELECT FIELDS(All) FROM Conversation LIMIT 20
+//Not working
+{{_endpoint}}/services/data/v{{version}}//connect/conversation/c50dbb21-652f-486e-a614-89066f621507/entries
+
+Licenses
+EinsteinGPTPlatformAddOn
+EinsteinGPTPromptBuilderAddOn
+Einstein GPT Copilot
+Customer Copilot for Digital Channels (Pilot)
+Einstein Prompt Templates
+Digital Engagement license
+GenieDataPlatformStarterPsl (10)
+Customer community Plus (10)
+Messaging for In-App and Web User (Permset License)
+Messaging User (Permset License)
+ChatbotEnabled and ChatbotSession perm/addon
+Service cloud
+
+Trialforce template - use Q branch to create an org
+0TTa5000001ETG5
+agenforce@demo.poc
+
+SELECT "plannerId__c", "feature__c",
+"prompt__c",
+"timestamp__c",
+"totalTokens__c"
+FROM "GenAIGatewayRequest__dlm"
+--where "plannerId__c"="16jao000000m16fAAA"
+
+SELECT
+"generationId__c",
+"generationResponseId__c",
+"responseParameters__c",
+"responseText__c"
+FROM "GenAIGeneration__dlm"
